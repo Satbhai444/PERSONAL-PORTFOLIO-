@@ -1,0 +1,160 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Darshan's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: rgb(0, 0, 33);
+      --text-color: white;
+      --box-color: rgb(18, 18, 62);
+      --accent-color: rgb(153, 153, 226);
+    }
+
+    .light-mode {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --box-color: #f0f0f0;
+      --accent-color: rgb(117, 107, 228);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: var(--box-color);
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav .right ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    .mode-toggle {
+      padding: 6px 12px;
+      border: 1px solid var(--text-color);
+      background: none;
+      color: var(--text-color);
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .container h1 {
+      color: var(--accent-color);
+    }
+
+    .service-card {
+      margin: 20px auto;
+      background: var(--box-color);
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .service-card h2 {
+      margin-bottom: 10px;
+      color: var(--accent-color);
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: lightgray;
+    }
+
+    .light-mode .service-card p {
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .mode-toggle {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="left">Darshan's Portfolio</div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <button class="mode-toggle" onclick="toggleMode()">🌙 </button>
+  </nav>
+
+  <div class="container">
+    <h1>Services I Offer</h1>
+
+    <div class="service-card">
+      <h2>Web Development</h2>
+      <p>I build responsive, modern, and high-performing websites using HTML, CSS, JavaScript, Node.js, and more.</p>
+    </div>
+
+    <div class="service-card">
+      <h2>Graphic Design</h2>
+      <p>Creative and clean designs for logos, banners, posters, and more using tools like Photoshop and Illustrator.</p>
+    </div>
+
+    <div class="service-card">
+      <h2>Video Editing</h2>
+      <p>Professional video editing services including cuts, transitions, music syncing, and effects.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>

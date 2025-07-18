@@ -1,0 +1,219 @@
+:root {
+  --bg-color: rgb(0, 0, 33);
+  --text-color: white;
+  --nav-bg: rgb(18, 18, 62);
+  --button-bg: #1e2167;
+  --border-color: white;
+  --footer-bg: #0e0e1a;
+  --footer-text: gray;
+  --link-hover: rgb(153, 153, 226);
+  --desc-color: gray;
+  --highlight: rgb(117, 107, 228);
+}
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --nav-bg: #f5f5f5;
+  --button-bg: #e0e0e0;
+  --border-color: #333;
+  --footer-bg: #eeeeee;
+  --footer-text: #555;
+  --link-hover: #4b4bff;
+  --desc-color: #444;
+  --highlight: #4b4bff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: var(--nav-bg);
+  transition: background-color 0.3s;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--highlight);
+  transition: width 0.3s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.theme-toggle {
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: 15px;
+  transition: color 0.3s;
+}
+main hr {
+  border: 0;
+  background: #9c97f1;
+  height: 1.2px;
+  margin: 40px 84px;
+}
+.left {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  margin: 130px 0;
+}
+.firstSection > div {
+  width: 30%;
+}
+.leftSection {
+  font-size: 3rem;
+}
+.leftSection .buttons {
+  padding: 50px 0;
+}
+.leftSection .btn {
+  padding: 12px;
+  background: var(--button-bg);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.leftSection .btn:hover {
+  animation: pulse 1s;
+  box-shadow: 0 0 10px var(--highlight);
+}
+.rightSection img {
+  width: 80%;
+  margin: 50px 0;
+  animation: float 3s ease-in-out infinite;
+}
+.purple {
+  color: var(--highlight);
+}
+.text-gray {
+  color: var(--desc-color);
+}
+#element {
+  color: var(--highlight);
+}
+.secondSection {
+  width: 80vw;
+  margin: auto;
+  height: 80vh;
+}
+.secondSection h1 {
+  font-size: 1.9rem;
+}
+.secondSection .box {
+  background: white;
+  width: 77vw;
+  height: 2px;
+  margin: 56px 0;
+  display: flex;
+}
+.secondSection .vertical {
+  height: 93px;
+  width: 1px;
+  background-color: var(--text-color);
+  margin: 0 120px;
+}
+.image-top {
+  width: 50px;
+  height: 50px; /* 🔥 Ensures same height */
+  object-fit: contain; /* 🔥 Keeps aspect ratio */
+  position: relative;
+  top: -50px;
+  left: -18px;
+  transition: transform 0.5s ease;
+}
+.image-top:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+.vertical-title {
+  position: relative;
+  top: 42px;
+  left: 24px;
+  font-size: 30px;
+  color: var(--text-color);
+}
+.vertical-desc {
+  position: relative;
+  top: 48px;
+  left: 23px;
+  color: var(--desc-color);
+  width: 150px;
+  font-size: 9px;
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+footer {
+  background-color: var(--footer-bg);
+  transition: background-color 0.3s;
+}
+.footer {
+  display: flex;
+  padding: 23px 122px;
+  justify-content: space-evenly;
+}
+.footer ul {
+  list-style: none;
+}
+.footer > div {
+  width: 223px;
+}
+.footer-rights {
+  text-align: center;
+  color: var(--footer-text);
+  padding: 12px 0;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(117, 107, 228, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(117, 107, 228, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(117, 107, 228, 0); }
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

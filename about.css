@@ -1,0 +1,149 @@
+:root {
+  --bg-color: rgb(0, 0, 33);
+  --text-color: white;
+  --nav-bg: rgb(18, 18, 62);
+  --footer-bg: #0e0e1a;
+  --link-color: white;
+  --border-color: white;
+}
+
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --nav-bg: #f0f0f0;
+  --footer-bg: #e0e0e0;
+  --link-color: #000000;
+  --border-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--nav-bg);
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav .left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav .right ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav .right ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .right ul li a:hover {
+  color: rgb(153, 153, 226);
+}
+
+.mode-toggle {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  background: none;
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-section {
+  padding: 60px 80px;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-text ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 8px;
+}
+
+.about-img {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.about-img img {
+  width: 250px;
+  border-radius: 12px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: gray;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.purple {
+  color: rgb(117, 107, 228);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .mode-toggle {
+    margin: 10px 0 0;
+  }
+}

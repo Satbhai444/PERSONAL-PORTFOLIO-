@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me - Darshan's Portfolio</title>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="left">Darshan's Portfolio</div>
+    <div class="right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contactme.html">Contact</a></li>
+      </ul>
+    </div>
+    <button class="mode-toggle" onclick="toggleMode()">🌙</button>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Me</h1>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+    </form>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/darshannn.0801/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/public-profile/settings" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Satbhai444" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:darshansatbhai38@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Darshan's Portfolio | All Rights Reserved
+  </footer>
+
+  <!-- External JS -->
+  <script>
+    function toggleMode() {
+  document.body.classList.toggle("light-mode");
+}
+
+  </script>
+
+</body>
+</html>
